@@ -27,14 +27,9 @@ This project was created to practice basic web design concepts and layout struct
 
 ## 🎓 Project Info
 
-- **Course**: Web Design Fundamentals  
-- **Instructor**: [Your Instructor's Name]  
-- **University**: [Your University Name]  
-- **Semester**: Spring 2025
-
-## 📸 Screenshot
-
-![Homepage Screenshot](assets/images/screenshot.png)
+- **Course**: Web Design Fundamentals  & Network 
+- **University**: [Islamic Azad University]  
+- **Semester**: Wiinter 2024
 
 ---
 
