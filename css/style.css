@@ -1,0 +1,493 @@
+/* افزودن فونت فارسی */
+@font-face {
+    font-family: 'Yekan';
+    src: url('../css/Yekan.woff') format('woff');
+}
+/* تنظیمات عمومی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Yekan', sans-serif;
+    background-color: #f2f2f2;
+    direction: rtl; /* راست به چپ */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* بک‌گراند کلی صفحه */
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* محتوای اصلی سایت */
+.main-container {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* هدر */
+/* استایل عمومی برای سربرگ */
+.header {
+    display: flex;
+    align-items: center; /* مرکز کردن محتویات عمودی */
+    justify-content: center; /* قرار دادن محتویات در مرکز افقی */
+    background-color: #970000;
+    color: white;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+}
+
+/* استایل برای لوگو */
+.logo-container {
+    position: absolute;
+    left: 20px; /* فاصله از لبه چپ صفحه */
+    top: 9px;
+}
+
+.logo {
+    height: 60px; /* ارتفاع لوگو */
+    border-radius: 100%;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* بزرگ شدن لوگو هنگام هاور */
+}
+
+/* استایل برای عنوان */
+.header h1 {
+    font-size: 30px;
+    text-align: center;
+    flex-grow: 1; /* اجازه می‌دهد عنوان در وسط قرار گیرد */
+    padding: 0 20px;
+    margin: 0;
+}
+
+/* بخش بدنه سایت برای تنظیم محل قرار گیری  */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.description, .menu, .news, .login {
+    flex: 1 1 45%; /* اندازه و نسبت برای هر بخش */
+}
+
+.menu {
+    order: 1; /* جایگاه این بخش */
+}
+
+.description {
+    order: 2;
+}
+
+.login {
+    order: 3;
+}
+
+.news {
+    order: 4;
+}
+
+/* طراحی کلی قسمت ورود */
+.login {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 4000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* گروه‌های ورودی */
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #0078D7; /* تغییر رنگ کادر ورودی هنگام فوکوس */
+    outline: none;
+}
+
+/* دکمه ورود */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #970000;
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #930000; /* تغییر رنگ دکمه هنگام هاور */
+}
+
+/* لینک فراموشی رمز عبور */
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #970000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #930000;
+}
+
+
+/* گرید چهار قسمتی */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+.login, .news, .description, .menu {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* هاور برای قسمت‌های مختلف */
+.description:hover, .news-item:hover, .menu:hover, .login:hover, .news:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل کلی منو */
+.menu {
+    background-color: #650000; /* رنگ پس‌زمینه */
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    height: 307px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #580808;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+/* استایل آیکون */
+.menu .icon {
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover .icon {
+    transform: rotate(5deg);
+}
+
+/* افکت انیمیشن زیرخط */
+.menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #0000007a;
+    margin: 5px auto 0;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* متن */
+.menu .text {
+    font-size: 14px;
+}
+
+
+/* استایل کلی برای بخش اخبار */
+.news {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Yekan', sans-serif;
+}
+
+.news h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* استایل هر خبر */
+.news-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    background-color: #ffe6e6;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #7d2626;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.news-item:hover {
+    background-color: #ffffff;
+    color: white;
+}
+
+
+/* استایل تصویر خبر */
+.news-thumbnail {
+    flex-shrink: 0;
+    width: 120px;
+    height: 90px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل محتوای خبر */
+.news-content {
+    flex-grow: 1;
+}
+
+.news-content h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+/* استایل دکمه مطالعه مقاله */
+.read-more {
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d70000;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #b50000;
+}
+
+/* گالری تصاویر */
+.gallery {
+    text-align: center;
+    padding-bottom: 100px;
+    overflow-x: scroll; 
+    white-space: nowrap; 
+}
+
+.image-scroll {
+    display: flex;
+    gap: 10px; 
+
+}
+
+.image-scroll img {
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.image-scroll img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ایجاد ظاهر اسکرول افقی */
+.gallery::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.gallery::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* فوتر */
+.footer {
+    background-color: #930000;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 16px 0;
+}
+
+.photo-section {
+    justify-items: center;
+}
+
+/* استایل کلی بخش description */
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* استایل محتوا */
+.description-content {
+    flex: 1;
+    text-align: right;
+}
+
+.description-content h1 {
+    font-size: 28px;
+    color: #910000;
+    margin-bottom: 15px;
+}
+
+.description-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #930000;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #b50000;
+}
+
+/* استایل تصویر */
+.description-image {
+    flex: 1;
+    text-align: center;
+}
+
+.description-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
